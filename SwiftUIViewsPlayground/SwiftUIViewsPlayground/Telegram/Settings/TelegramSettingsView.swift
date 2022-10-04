@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct TelegramSettingsView: View {
+    
+    @ObservedObject var model = viewModel
+    
     var body: some View {
             VStack(alignment: .center, spacing: 0) {
-                TelegramCircleImage(image: "smiley.fill")
+                TelegramCircleImage(image: model.currentUser.image,
+                                    colors: model.currentUser.contact.colors)
                     .frame(width: 100, height: 100)
                     .padding(.bottom)
-                Text("Your name")
+                Text(model.currentUser.contact.name)
                     .font(.title)
-                Text("+7 777 777-77-77 • @test")
+                Text("\(model.currentUser.phone) • \(model.currentUser.tag)")
                     .font(.headline)
                     .foregroundColor(.gray)
                 

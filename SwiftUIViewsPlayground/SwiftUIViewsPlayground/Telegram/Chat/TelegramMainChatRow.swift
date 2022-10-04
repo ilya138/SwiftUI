@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct TelegramMainChatRow: View {
+    
     @State var chat: Chat
+    @ObservedObject var model = viewModel
     
     var body: some View {
         HStack {
             
             var lastMessage = chat.getLastMessage()
-            TelegramCircleImage(image: chat.img)
+            TelegramCircleImage(image: chat.img,
+                                colors: chat.colors)
                 .frame(width: 55, height: 55)
             VStack(alignment: .leading) {
                 HStack {

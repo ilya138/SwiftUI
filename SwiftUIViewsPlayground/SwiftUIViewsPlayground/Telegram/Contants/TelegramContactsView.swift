@@ -18,29 +18,28 @@ struct TelegramContactsView: View {
     var body: some View {
         List {
             NavigationLink {
-                
+                TelegramPeopleNearby()
             } label: {
                 Label("Find People Nearby", systemImage: "mappin.and.ellipse")
                     .foregroundColor(.gray)
             }
             NavigationLink {
-                
+                // Invite
             } label: {
                 Label("Invite Friends", systemImage: "person.badge.plus")
             }
             .foregroundColor(.gray)
             
             ForEach(viewModel.contacts) {contact in
-                HStack {
-                    TelegramCircleImage(image: contact.img)
-                        .frame(width: 30, height: 30)
-                        .padding(.trailing, 5)
-                    VStack(alignment: .leading) {
-                        Text(contact.name)
-                        Text("last seen \(contact.lastSeenPresentation)")
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                    }
+                
+                NavigationLink {
+                    TelegramChatView(chat: contact.chat)
+                } label: {
+                    TelegramContactRow(contact: contact)
+                }
+                    
+                .contextMenu {
+                    ContactContextMenu(contact: contact)
                 }
                 
                 .searchable(text: $searchText, prompt: "Search for users")
@@ -123,6 +122,43 @@ struct NewContactView: View {
     }
 }
 
+struct ContactContextMenu: View {
+    
+    @State var contact: Contact
+    
+    var body: some View {
+        // Mark as Unread
+        NavigationLink {
+            TelegramChatView(chat: contact.chat)
+        } label: {
+            Label("Send Message", systemImage: "message")
+        }
+        
+        // Pin
+        Button {
+            //viewModel.pinUnpin(chat: chat)
+        } label: {
+            Label("Start Secret Chat", systemImage: "timer")
+        }
+        
+        // Mute
+        Button {
+            //viewModel.muteUnmute(chat: chat)
+        } label: {
+            Label("Call", systemImage: "phone")
+        }
+        
+        // Delete
+        Button {
+            //viewModel.deleteChat(chat: chat)
+        } label: {
+            Label("Video Call", systemImage: "video")
+        }
+    }
+}
+
+
+
 struct TelegramContactsView_Previews: PreviewProvider {
     static var previews: some View {
         TelegramContactsView_PreviewContainer()
@@ -133,6 +169,8 @@ struct TelegramContactsView_PreviewContainer: View {
     
     @State var newContact = false
     var body: some View {
-        TelegramContactsView(newContact: $newContact)
+        NavigationView {
+            TelegramContactsView(newContact: $newContact)
+        }
     }
 }

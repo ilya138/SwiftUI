@@ -9,7 +9,25 @@ import SwiftUI
 
 struct TelegramPeopleNearby: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+            Circle()
+                .frame(width: 150, height: 150)
+                .padding(.bottom, 50)
+            Text("People Nearby")
+                .font(.title)
+            Text("Quickly add people nearby who are also viewing this section and discover local groups chats.")
+                .padding(.horizontal, 30)
+            Text("Please alow on location access to enable this feature.")
+                .padding(30)
+            Button {
+                // pass
+            } label: {
+                Text("Allow Access").frame(width: 250)
+            }
+            .buttonStyle(.bordered)
+            Spacer()
+        }
     }
 }
 

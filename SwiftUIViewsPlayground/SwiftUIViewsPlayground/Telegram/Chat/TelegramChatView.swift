@@ -131,7 +131,10 @@ struct TelegramChatView: View {
                                     }
                                 } else {
                                     Button {
-                                        chat.sendMessage(text: textMessage, sender: viewModel.currentUser.contact)
+                                        viewModel.sendMessage(
+                                            chat: chat,
+                                            text: textMessage,
+                                            sender: viewModel.currentUser.contact)
                                         textMessage = ""
                                     } label: {
                                         Image(systemName: "arrow.up.circle.fill")
@@ -145,7 +148,6 @@ struct TelegramChatView: View {
                 }
                 
             }
-            
         }
     }
 
@@ -155,8 +157,10 @@ struct TelegramChatView: View {
 struct TelegramChatView_Previews: PreviewProvider {
     
     static var previews: some View {
-        NavigationView {
-            TelegramChatView(chat: viewModel.chats[0])
+        TabView {
+            NavigationView {
+                TelegramChatView(chat: viewModel.chats[0])
+            }
         }
         
     }

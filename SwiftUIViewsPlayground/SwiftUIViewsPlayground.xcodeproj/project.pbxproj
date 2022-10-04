@@ -7,18 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C577AA0428D230F8007BFF36 /* TelegramChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C577AA0328D230F8007BFF36 /* TelegramChatView.swift */; };
+		C579A7CF28D70DB00017CCC7 /* TelegramChatMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C579A7CE28D70DB00017CCC7 /* TelegramChatMessagesView.swift */; };
+		C57A07D728E08B8C00368426 /* TelegramArchivedChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57A07D628E08B8C00368426 /* TelegramArchivedChatView.swift */; };
+		C5804FBA28E2B8900007C549 /* TelegramContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5804FB928E2B88F0007C549 /* TelegramContactRow.swift */; };
+		C5891EE728D97E3100D5E19E /* TelegramNewContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891EE628D97E3100D5E19E /* TelegramNewContactView.swift */; };
+		C5891EE928D9878900D5E19E /* TelegramNewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891EE828D9878900D5E19E /* TelegramNewMessageView.swift */; };
+		C58EDD5128D2D9AE00811474 /* TelegramContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EDD5028D2D9AE00811474 /* TelegramContactsView.swift */; };
+		C58EDD5328D2DF5900811474 /* TelegramSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EDD5228D2DF5900811474 /* TelegramSettingsView.swift */; };
+		C58EDD5528D2EA6C00811474 /* TelegramCircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EDD5428D2EA6C00811474 /* TelegramCircleImage.swift */; };
+		C58EDD5728D2EC7800811474 /* TelegramChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58EDD5628D2EC7800811474 /* TelegramChatsView.swift */; };
 		C591BD0B28D1A02F00D0C43C /* SwiftUIViewsPlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591BD0A28D1A02F00D0C43C /* SwiftUIViewsPlaygroundApp.swift */; };
 		C591BD0D28D1A02F00D0C43C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591BD0C28D1A02F00D0C43C /* ContentView.swift */; };
 		C591BD0F28D1A03100D0C43C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C591BD0E28D1A03100D0C43C /* Assets.xcassets */; };
 		C591BD1228D1A03100D0C43C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C591BD1128D1A03100D0C43C /* Preview Assets.xcassets */; };
+		C591BD1A28D1A06900D0C43C /* TelegramMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591BD1928D1A06900D0C43C /* TelegramMainView.swift */; };
+		C591BD1C28D1A5A100D0C43C /* TelegramModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591BD1B28D1A5A100D0C43C /* TelegramModel.swift */; };
+		C5AB8BFE28D251BB00492A09 /* TelegramMainChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AB8BFD28D251BB00492A09 /* TelegramMainChatRow.swift */; };
+		C5C4977D28DF00C600FA9EC8 /* TelegramPeopleNearby.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C4977C28DF00C600FA9EC8 /* TelegramPeopleNearby.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C577AA0328D230F8007BFF36 /* TelegramChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramChatView.swift; sourceTree = "<group>"; };
+		C579A7CE28D70DB00017CCC7 /* TelegramChatMessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramChatMessagesView.swift; sourceTree = "<group>"; };
+		C57A07D628E08B8C00368426 /* TelegramArchivedChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramArchivedChatView.swift; sourceTree = "<group>"; };
+		C5804FB928E2B88F0007C549 /* TelegramContactRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramContactRow.swift; sourceTree = "<group>"; };
+		C5891EE628D97E3100D5E19E /* TelegramNewContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramNewContactView.swift; sourceTree = "<group>"; };
+		C5891EE828D9878900D5E19E /* TelegramNewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramNewMessageView.swift; sourceTree = "<group>"; };
+		C58EDD5028D2D9AE00811474 /* TelegramContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramContactsView.swift; sourceTree = "<group>"; };
+		C58EDD5228D2DF5900811474 /* TelegramSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramSettingsView.swift; sourceTree = "<group>"; };
+		C58EDD5428D2EA6C00811474 /* TelegramCircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramCircleImage.swift; sourceTree = "<group>"; };
+		C58EDD5628D2EC7800811474 /* TelegramChatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramChatsView.swift; sourceTree = "<group>"; };
 		C591BD0728D1A02F00D0C43C /* SwiftUIViewsPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIViewsPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C591BD0A28D1A02F00D0C43C /* SwiftUIViewsPlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewsPlaygroundApp.swift; sourceTree = "<group>"; };
 		C591BD0C28D1A02F00D0C43C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C591BD0E28D1A03100D0C43C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C591BD1128D1A03100D0C43C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C591BD1928D1A06900D0C43C /* TelegramMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramMainView.swift; sourceTree = "<group>"; };
+		C591BD1B28D1A5A100D0C43C /* TelegramModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramModel.swift; sourceTree = "<group>"; };
+		C5AB8BFD28D251BB00492A09 /* TelegramMainChatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramMainChatRow.swift; sourceTree = "<group>"; };
+		C5C4977C28DF00C600FA9EC8 /* TelegramPeopleNearby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramPeopleNearby.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +60,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C57649F828DC205B006C7B72 /* Contants */ = {
+			isa = PBXGroup;
+			children = (
+				C58EDD5028D2D9AE00811474 /* TelegramContactsView.swift */,
+				C5891EE628D97E3100D5E19E /* TelegramNewContactView.swift */,
+				C5C4977C28DF00C600FA9EC8 /* TelegramPeopleNearby.swift */,
+				C5804FB928E2B88F0007C549 /* TelegramContactRow.swift */,
+			);
+			path = Contants;
+			sourceTree = "<group>";
+		};
+		C57649F928DC2068006C7B72 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C58EDD5228D2DF5900811474 /* TelegramSettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		C591BCFE28D1A02F00D0C43C = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +98,7 @@
 		C591BD0928D1A02F00D0C43C /* SwiftUIViewsPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				C591BD1828D1A04E00D0C43C /* Telegram */,
 				C591BD0A28D1A02F00D0C43C /* SwiftUIViewsPlaygroundApp.swift */,
 				C591BD0C28D1A02F00D0C43C /* ContentView.swift */,
 				C591BD0E28D1A03100D0C43C /* Assets.xcassets */,
@@ -65,6 +113,32 @@
 				C591BD1128D1A03100D0C43C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C591BD1828D1A04E00D0C43C /* Telegram */ = {
+			isa = PBXGroup;
+			children = (
+				C5D94A2A28D8E78D00E11DE8 /* Chat */,
+				C591BD1928D1A06900D0C43C /* TelegramMainView.swift */,
+				C57649F828DC205B006C7B72 /* Contants */,
+				C591BD1B28D1A5A100D0C43C /* TelegramModel.swift */,
+				C57649F928DC2068006C7B72 /* Settings */,
+				C58EDD5428D2EA6C00811474 /* TelegramCircleImage.swift */,
+			);
+			path = Telegram;
+			sourceTree = "<group>";
+		};
+		C5D94A2A28D8E78D00E11DE8 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				C577AA0328D230F8007BFF36 /* TelegramChatView.swift */,
+				C579A7CE28D70DB00017CCC7 /* TelegramChatMessagesView.swift */,
+				C58EDD5628D2EC7800811474 /* TelegramChatsView.swift */,
+				C5AB8BFD28D251BB00492A09 /* TelegramMainChatRow.swift */,
+				C5891EE828D9878900D5E19E /* TelegramNewMessageView.swift */,
+				C57A07D628E08B8C00368426 /* TelegramArchivedChatView.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +211,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C58EDD5128D2D9AE00811474 /* TelegramContactsView.swift in Sources */,
+				C5891EE728D97E3100D5E19E /* TelegramNewContactView.swift in Sources */,
+				C579A7CF28D70DB00017CCC7 /* TelegramChatMessagesView.swift in Sources */,
+				C577AA0428D230F8007BFF36 /* TelegramChatView.swift in Sources */,
+				C58EDD5328D2DF5900811474 /* TelegramSettingsView.swift in Sources */,
+				C5891EE928D9878900D5E19E /* TelegramNewMessageView.swift in Sources */,
+				C591BD1C28D1A5A100D0C43C /* TelegramModel.swift in Sources */,
+				C5AB8BFE28D251BB00492A09 /* TelegramMainChatRow.swift in Sources */,
+				C5804FBA28E2B8900007C549 /* TelegramContactRow.swift in Sources */,
 				C591BD0D28D1A02F00D0C43C /* ContentView.swift in Sources */,
+				C58EDD5528D2EA6C00811474 /* TelegramCircleImage.swift in Sources */,
+				C57A07D728E08B8C00368426 /* TelegramArchivedChatView.swift in Sources */,
+				C58EDD5728D2EC7800811474 /* TelegramChatsView.swift in Sources */,
 				C591BD0B28D1A02F00D0C43C /* SwiftUIViewsPlaygroundApp.swift in Sources */,
+				C591BD1A28D1A06900D0C43C /* TelegramMainView.swift in Sources */,
+				C5C4977D28DF00C600FA9EC8 /* TelegramPeopleNearby.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +355,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIViewsPlayground/Preview Content\"";
+				DEVELOPMENT_TEAM = 6QWFZ5D54B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -274,6 +363,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -281,6 +371,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ilya138.SwiftUIViewsPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -295,6 +388,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIViewsPlayground/Preview Content\"";
+				DEVELOPMENT_TEAM = 6QWFZ5D54B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -302,6 +396,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +404,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ilya138.SwiftUIViewsPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

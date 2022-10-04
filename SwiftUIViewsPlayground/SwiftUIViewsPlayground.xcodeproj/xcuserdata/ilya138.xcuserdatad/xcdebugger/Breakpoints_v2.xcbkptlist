@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "559696B4-7EAD-4BBC-B794-8CBE48B23AAA"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7454C9F1-C336-4416-98A9-CCD422274E77"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIViewsPlayground/Telegram/TelegramChatsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "deleteChat(at:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C383BF8C-64E9-4FD4-8935-A9BE3FE16F6B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIViewsPlayground/Telegram/TelegramChatsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "deleteChat(at:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD91D2FA-62AC-46F4-81E1-A5C87074AC8C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIViewsPlayground/Telegram/TelegramChatsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "deleteChat(at:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE03E71C-010B-4DEF-947D-245D46705396"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIViewsPlayground/Telegram/TelegramModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "sendMessage(text:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CFEFDD16-C6F2-4500-AADE-EFCF9FC2083E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIViewsPlayground/Telegram/TelegramChatView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "TelegramChatView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "CFEFDD16-C6F2-4500-AADE-EFCF9FC2083E - 775e670574101e66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUIViewsPlayground.TelegramChatView.messageFocus.getter : Swift.Bool"
+                  moduleName = "SwiftUIViewsPlayground"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilya138/Desktop/SwiftUI/SwiftUIViewsPlayground/SwiftUIViewsPlayground/Telegram/TelegramChatView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "CFEFDD16-C6F2-4500-AADE-EFCF9FC2083E - cd9f7d56c0153272"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUIViewsPlayground.TelegramChatView.messageFocus.setter : Swift.Bool"
+                  moduleName = "SwiftUIViewsPlayground"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilya138/Desktop/SwiftUI/SwiftUIViewsPlayground/SwiftUIViewsPlayground/Telegram/TelegramChatView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "CFEFDD16-C6F2-4500-AADE-EFCF9FC2083E - 6078192db45e4761"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUIViewsPlayground.TelegramChatView.messageFocus.modify : Swift.Bool"
+                  moduleName = "SwiftUIViewsPlayground"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilya138/Desktop/SwiftUI/SwiftUIViewsPlayground/SwiftUIViewsPlayground/Telegram/TelegramChatView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "CFEFDD16-C6F2-4500-AADE-EFCF9FC2083E - 6b93be6dc5b48317"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUIViewsPlayground.TelegramChatView.messageFocus.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SwiftUIViewsPlayground"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilya138/Desktop/SwiftUI/SwiftUIViewsPlayground/SwiftUIViewsPlayground/Telegram/TelegramChatView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "CFEFDD16-C6F2-4500-AADE-EFCF9FC2083E - 47c619b71b2a7858"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUIViewsPlayground.TelegramChatView.$messageFocus.getter : SwiftUI.FocusState&lt;Swift.Bool&gt;.Binding"
+                  moduleName = "SwiftUIViewsPlayground"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilya138/Desktop/SwiftUI/SwiftUIViewsPlayground/SwiftUIViewsPlayground/Telegram/TelegramChatView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "176">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CEA5336B-56EA-46BF-9D4F-54D8FD3BE107"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIViewsPlayground/Telegram/TelegramMainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

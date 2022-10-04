@@ -18,7 +18,8 @@ struct TelegramChatMessagesView: View {
             }
             HStack {
                 if !message.mine {
-                    TelegramCircleImage(image: message.sender.img)
+                    TelegramCircleImage(image: message.sender.img,
+                                        colors: message.sender.colors)
                         .frame(width: 40, height: 40)
                 }
                 VStack {

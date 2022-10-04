@@ -7,19 +7,26 @@
 
 import SwiftUI
 
-struct TelegramContactImage: View {
+struct TelegramCircleImage: View {
+    
     let image: String
-    let colorShade = Double.random(in: 0.5...1)
+    var colors: [Double] = [1, 0, 0]
+    
     var body: some View {
+        
+        let upColor = Color(
+            red: colors[0],
+            green: colors[1],
+            blue: colors[2])
+        let downColor = upColor.opacity(0.8)
+        
         Circle()
-            .frame(width: 55, height: 55)
-            .opacity(Double.random(in: 0.2...1))
-            .foregroundColor(
-                Color(
-                    red: colorShade,
-                    green: colorShade,
-                    blue: colorShade
-                ))
+            .fill(
+                LinearGradient(
+                    gradient: Gradient(colors: [upColor, downColor]),
+                    startPoint: .top,
+                    endPoint: .bottom)
+            )
             .overlay {
                 Image(systemName: image)
                     .foregroundColor(.black)
@@ -28,8 +35,8 @@ struct TelegramContactImage: View {
     }
 }
 
-struct TelegramContactImage_Previews: PreviewProvider {
+struct TelegramCircleImage_Previews: PreviewProvider {
     static var previews: some View {
-        TelegramContactImage(image: "pencil")
+        TelegramCircleImage(image: "pencil")
     }
 }
