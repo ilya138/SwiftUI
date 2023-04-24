@@ -86,12 +86,18 @@ struct PostView: View {
                 }
             }.padding(.horizontal, 10.0)
             
-            // Image
-            Image(post.image)
-                .resizable()
-                .frame(height: 400)
-                .foregroundColor(Color(red: Double.random(in: 0...1), green: Double.random(in: 0...1), blue: Double.random(in: 0...1)))
-            
+            // Images wheel
+            TabView {
+                ForEach(post.images, id: \.self) { image in
+                    Image(image)
+                        .resizable()
+                        //.aspectRatio(1, contentMode: .fit)
+                        .clipped()
+                        .frame(height: 400)
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: post.images.count > 1 ? .always : .never))
+            .frame(minHeight: 400)
             
             //
             HStack {
