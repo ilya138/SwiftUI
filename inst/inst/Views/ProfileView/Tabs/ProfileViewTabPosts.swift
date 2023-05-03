@@ -14,10 +14,10 @@ struct ProfileViewTabPosts: View {
     
     var body: some View {
         VStack {
-            LazyVGrid(columns: [.init(.adaptive(minimum: 100, maximum: .infinity), spacing: 1)], spacing: 1) {
+            LazyVGrid(columns: Array(repeating: GridItem(spacing: 1), count: 3), spacing: 1) {
                 ForEach(user.posts) { post in
                     NavigationLink {
-                        FeedView(data: data, posts: user.posts, currentPost: post)
+                        FeedView(data: data, currentPost: post)
                             .navigationTitle("Posts")
                     } label: {
                         Image(post.getImage())

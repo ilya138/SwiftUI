@@ -13,7 +13,7 @@ struct Post: Identifiable {
     
     var id = UUID()
     
-    var sender: User
+    var sender: UUID
     var location = ""
     var images = [String]()
     var description = ""
@@ -25,7 +25,7 @@ struct Post: Identifiable {
     
     // Comments
     var canComment = Bool.random()
-    var comments = [String]()
+    var comments = [Comment]()
     
     // Views
     var views = Int.random(in: 0...1000)
@@ -82,6 +82,37 @@ struct StoryGroup: Identifiable {
     var stories = [Story]()
 }
 
+struct Notification: Identifiable {
+    
+    var id = UUID()
+    
+    var date = Date.now
+    
+    var user: User
+    var type: NotificationType
+    
+    // Optional values (notification parameters)
+    var post: Post? = nil
+    var comment: Comment? = nil
+    
+    var text: String {
+        switch type {
+        case .follow: return "started following you."
+        case .likePost: return "liked your post."
+        case .likeStory: return "liked your story."
+        case .comment: return "commented: \(self.comment?.comment ?? "")"
+        }
+    }
+    
+    enum NotificationType: CaseIterable {
+        case follow
+        case likePost
+        case likeStory
+        case comment
+    }
+    
+}
+
 struct User: Identifiable, Hashable, Equatable {
     
     var id = UUID()
@@ -98,17 +129,34 @@ struct User: Identifiable, Hashable, Equatable {
     // Posts
     var posts = [Post]()
     
+    mutating func addPost(post: Post) {
+        self.posts.append(post)
+    }
+    
     // Reels
     var reels = [Post]()
     
     // Tags
     var tags = [Post]()
     
-    // Followers
-    var followers = Int.random(in: 1...1000)
-    
     // Following
-    var following = Int.random(in: 1...1000)
+    var following = [User]()
+    
+    // Followers
+    func followers(users: [User]) -> [User] {
+        users.filter({ $0.following.contains(self) })
+    }
+    
+    mutating func follow(user: User) {
+        following.append(user)
+    }
+    
+    mutating func unfollow(user: User) {
+        if let index = following.firstIndex(of: user) {
+            following.remove(at: index)
+        }
+    }
+    
     
     func hasUnwatchedStories() -> Bool {
         self.stories.filter({ $0.watched }).isEmpty
@@ -124,10 +172,20 @@ struct User: Identifiable, Hashable, Equatable {
     
 }
 
+struct Comment: Identifiable {
+    
+    var id = UUID()
+    
+    var sender: User
+    var comment: String
+    var likes = 0
+    
+}
+
 class ModelData {
-    @Published var posts = [Post]()
     @Published var users = [User]()
     @Published var currentUser = User(name: "Ilya Zakharov")
+    @Published var notifications = [Notification]()
     
     init() {
         
@@ -158,7 +216,7 @@ class ModelData {
         
         // Current user posts
         for i in 1...8 {
-            var post = Post(sender: currentUser)
+            var post = Post(sender: currentUser.id)
             post.location = ["Moscow", "Penza", "Kemer", "Saranks", ""].randomElement()!
             post.description = getRandomText()
             post.likes = Int.random(in: 0...10000)
@@ -174,7 +232,7 @@ class ModelData {
         
         // Current user reels
         for i in 1...4 {
-            var reel = Post(sender: currentUser)
+            var reel = Post(sender: currentUser.id)
             reel.location = ["Moscow", "Penza", "Kemer", "Saranks", ""].randomElement()!
             reel.description = getRandomText()
             reel.likes = Int.random(in: 0...10000)
@@ -198,6 +256,7 @@ class ModelData {
             
             var newUser = User(name: names.popLast()!)
             newUser.profilePic = profilePics.popLast()!
+            newUser.login = newUser.name
             
             for _ in 0...Int.random(in: 0...3) {
                 if stories.isEmpty {
@@ -208,12 +267,29 @@ class ModelData {
                 newUser.stories.append(newStory)
             }
             
+            // Followers/following
+            var tmp = users.shuffled()
+            for _ in 0..<Int.random(in: 0...users.count) {
+                if let tmpUser = tmp.popLast() {
+                    newUser.following.append(tmpUser)
+                }
+            }
+            
             users.append(newUser)
         }
         
+        // Current user followers
+        var tmp = users.shuffled()
+        for _ in 0...Int.random(in: 0..<users.count) {
+            if let tmpUser = tmp.popLast() {
+                currentUser.following.append(tmpUser)
+            }
+        }
+
         // Create posts
         for i in 1...10 {
-            var post = Post(sender: users.randomElement()!)
+            var sender = users.randomElement()!
+            var post = Post(sender: sender.id)
             post.location = ["Moscow", "Penza", "Kemer", "Saranks", ""].randomElement()!
             post.description = getRandomText()
             post.likes = Int.random(in: 0...10000)
@@ -222,15 +298,66 @@ class ModelData {
                 post.images.append("photo\(Int.random(in: 1...10))")
             }
             post.liked = Bool.random()
-            posts.append(post)
+            
+            // Comments
+            let comment = Comment(sender: users.randomElement()!, comment: getRandomText())
+            post.comments.append(comment)
+            
+            //posts.append(post)
+            
+            if let senderIndex = users.firstIndex(where: { $0.id == sender.id }) {
+                users[senderIndex].addPost(post: post)
+            }
+            //sender.addPost(post: post)
             
             // Tag current user
-            if Int.random(in: 0...10) > 8 {
-                //currentUser.tags.append(post)
+            if Int.random(in: 0...10) > 9 {
+                currentUser.tags.append(post)
+            }
+            
+        }
+        
+        users.append(currentUser)
+        
+        // Create notifications
+        for _ in 1...10 {
+            
+            let notifyType = Notification.NotificationType.allCases.randomElement()!
+            
+            let notification: Notification
+            
+            if notifyType == .follow {
+                notification = Notification(user: users.randomElement()!, type: notifyType)
+            } else if notifyType == .comment{
+                let post = currentUser.posts.randomElement()!
+                notification = Notification(user: users.randomElement()!, type: notifyType, post: post, comment: post.comments.randomElement())
+            } else {
+                notification = Notification(user: users.randomElement()!, type: notifyType, post: currentUser.posts.randomElement()!)
+            }
+            notifications.append(notification)
+        }
+        
+    }
+    
+    func getFeed() -> [Post] {
+        var feed = [Post]()
+        
+        for user in users {
+            
+            if user.id == currentUser.id {
+                continue
+            }
+            
+            for post in user.posts {
+                feed.append(post)
             }
         }
         
-        posts = posts.shuffled()
+        return feed
+    }
+    
+    func getUser(id: UUID) -> User {
+        users.first(where: { $0.id == id })!
     }
     
     func getUserStoriesList() -> [User] {

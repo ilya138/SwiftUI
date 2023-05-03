@@ -27,6 +27,7 @@
 		C530D71E29F05B2200EC9A9A /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530D71D29F05B2200EC9A9A /* FeedView.swift */; };
 		C533B8E729EDCC1C009ED372 /* ProfileStoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533B8E629EDCC1C009ED372 /* ProfileStoryItemView.swift */; };
 		C533B8E929EDCC50009ED372 /* ProfileStoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533B8E829EDCC50009ED372 /* ProfileStoryListView.swift */; };
+		C53F3AD129F9B445002A8AB9 /* DebugTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53F3AD029F9B445002A8AB9 /* DebugTabView.swift */; };
 		C54D2A1D29EFC1CA0074414D /* ProfileViewTabPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D2A1C29EFC1CA0074414D /* ProfileViewTabPosts.swift */; };
 		C54D2A1F29EFC2080074414D /* ProfileViewTabReels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D2A1E29EFC2080074414D /* ProfileViewTabReels.swift */; };
 		C54D2A2129EFC2420074414D /* ProfileViewTabTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D2A2029EFC2420074414D /* ProfileViewTabTags.swift */; };
@@ -40,6 +41,7 @@
 		C5B1AB2329F2E45B0009F8EA /* currentUserReel4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C5B1AB2029F2E2D40009F8EA /* currentUserReel4.mp4 */; };
 		C5B1AB2429F2E45B0009F8EA /* currentUserReel2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C5B1AB1D29F2E2D20009F8EA /* currentUserReel2.mp4 */; };
 		C5D09AF129F065AA00D98C7D /* ReelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D09AF029F065AA00D98C7D /* ReelView.swift */; };
+		C5F38C1529F8E99000010EB8 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F38C1429F8E98F00010EB8 /* NotificationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,7 @@
 		C530D71D29F05B2200EC9A9A /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		C533B8E629EDCC1C009ED372 /* ProfileStoryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStoryItemView.swift; sourceTree = "<group>"; };
 		C533B8E829EDCC50009ED372 /* ProfileStoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStoryListView.swift; sourceTree = "<group>"; };
+		C53F3AD029F9B445002A8AB9 /* DebugTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugTabView.swift; sourceTree = "<group>"; };
 		C54D2A1C29EFC1CA0074414D /* ProfileViewTabPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewTabPosts.swift; sourceTree = "<group>"; };
 		C54D2A1E29EFC2080074414D /* ProfileViewTabReels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewTabReels.swift; sourceTree = "<group>"; };
 		C54D2A2029EFC2420074414D /* ProfileViewTabTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewTabTags.swift; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 		C5B1AB1F29F2E2D30009F8EA /* currentUserReel3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = currentUserReel3.mp4; sourceTree = "<group>"; };
 		C5B1AB2029F2E2D40009F8EA /* currentUserReel4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = currentUserReel4.mp4; sourceTree = "<group>"; };
 		C5D09AF029F065AA00D98C7D /* ReelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelView.swift; sourceTree = "<group>"; };
+		C5F38C1429F8E98F00010EB8 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,7 @@
 			children = (
 				84BBD2F929DF086B00B7713B /* Stories */,
 				843D5FA829DC7BF2003874C9 /* FeedTabView.swift */,
+				C5F38C1429F8E98F00010EB8 /* NotificationsView.swift */,
 			);
 			path = FeedTabView;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 				843D5FA729DC7BDE003874C9 /* FeedTabView */,
 				C58526AC29F6534700A97718 /* ExploreTabView */,
 				C58526AF29F6562700A97718 /* ProfileTabView.swift */,
+				C53F3AD029F9B445002A8AB9 /* DebugTabView.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 			files = (
 				843A59D529DCAD89008CB5B4 /* DataModel.swift in Sources */,
 				843D5FAC29DC7C0D003874C9 /* ProfileView.swift in Sources */,
+				C53F3AD129F9B445002A8AB9 /* DebugTabView.swift in Sources */,
 				C54D2A1F29EFC2080074414D /* ProfileViewTabReels.swift in Sources */,
 				843D5F7F29DC7B45003874C9 /* ContentView.swift in Sources */,
 				C533B8E729EDCC1C009ED372 /* ProfileStoryItemView.swift in Sources */,
@@ -459,6 +466,7 @@
 				C54D2A1D29EFC1CA0074414D /* ProfileViewTabPosts.swift in Sources */,
 				C530D71E29F05B2200EC9A9A /* FeedView.swift in Sources */,
 				C58526B429F6584600A97718 /* MoreActionsSheet.swift in Sources */,
+				C5F38C1529F8E99000010EB8 /* NotificationsView.swift in Sources */,
 				C58526AE29F6536500A97718 /* ExploreTabView.swift in Sources */,
 				843A59D329DB0204008CB5B4 /* PostView.swift in Sources */,
 				8461088D29DDD5DD002BD4BC /* ShareToView.swift in Sources */,

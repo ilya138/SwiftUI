@@ -10,13 +10,12 @@ import SwiftUI
 struct FeedView: View {
     
     @State var data: ModelData
-    @State var posts: [Post]
     var currentPost: Post?
     
     var body: some View {
         ScrollViewReader { value in
             ScrollView {
-                ForEach(posts) {post in
+                ForEach(data.getFeed()) {post in
                     VStack {
                         Divider()
                             .frame(height: 5)
@@ -47,7 +46,7 @@ struct ParentView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                FeedView(data: data, posts: data.posts)
+                FeedView(data: data)
             }
         }
     }

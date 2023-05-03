@@ -10,13 +10,14 @@ import SwiftUI
 struct ProfileViewTabReels: View {
     
     var data: ModelData
+    var user: User
     
     var body: some View {
         VStack {
             LazyVGrid(columns: [.init(.adaptive(minimum: 100, maximum: .infinity), spacing: 1)], spacing: 1) {
-                ForEach(data.currentUser.reels) { reel in
+                ForEach(user.reels) { reel in
                     NavigationLink {
-                        ReelView(reel: reel)
+                        ReelView(reel: reel, data: data)
                     } label: {
                         Image(uiImage: reel.getThumbnail()!)
                             .resizable()
@@ -38,9 +39,10 @@ struct ProfileViewTabReels: View {
 }
 
 struct ProfileViewReelsTab_Previews: PreviewProvider {
+    static var previewData = previewData()
     static var previews: some View {
         NavigationView {
-            ProfileViewTabReels(data: ContentView.ViewModel().data)
+            ProfileViewTabReels(data: previewData, user: previewData.currentUser)
         }
     }
 }

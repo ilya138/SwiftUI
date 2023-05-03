@@ -10,13 +10,14 @@ import SwiftUI
 struct ProfileViewTabTags: View {
     
     var data: ModelData
+    var user: User
     
     var body: some View {
         VStack {
-            if data.currentUser.tags.count > 0 {
+            if user.tags.count > 0 {
                 // Show tags grid
                 LazyVGrid(columns: [.init(.adaptive(minimum: 100, maximum: .infinity), spacing: 1)], spacing: 1) {
-                    ForEach(data.currentUser.tags) { post in
+                    ForEach(user.tags) { post in
                         Image(post.getImage())
                             .resizable()
                             .aspectRatio(contentMode: .fill)
@@ -45,6 +46,6 @@ struct ProfileViewTabTags: View {
 
 struct ProfileViewTabTags_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileViewTabTags(data: ContentView.ViewModel().data)
+        ProfileViewTabTags(data: previewData(), user: previewData().currentUser)
     }
 }

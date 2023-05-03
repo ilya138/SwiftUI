@@ -12,30 +12,35 @@ struct FeedTabView: View {
     var data: ModelData
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            
-            // Header
-            HStack {
-                Text("SOMETHINgram")
-                    .font(.title)
-                Spacer()
-                Image(systemName: "heart")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 25)
-                Image(systemName: "plus.message")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 27)
-                    .padding(.leading, 10)
+        NavigationView {
+            ScrollView(.vertical, showsIndicators: false) {
+                
+                // Header
+                HStack {
+                    Text("SOMETHINgram")
+                        .font(.title)
+                    Spacer()
+                    NavigationLink(destination: NotificationsView(data: data)) {
+                        Image(systemName: "heart")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 25)
+                            .tint(.primary)
+                    }
+                    Image(systemName: "plus.message")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 27)
+                        .padding(.leading, 10)
+                }
+                .padding(.horizontal)
+                
+                // Stories
+                StoriesListView(data: data)
+                
+                // Posts
+                FeedView(data: data)
             }
-            .padding(.horizontal)
-            
-            // Stories
-            StoriesListView(data: data)
-            
-            // Posts
-            FeedView(data: data, posts: data.posts)
         }
     }
 }

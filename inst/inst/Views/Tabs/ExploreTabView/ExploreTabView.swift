@@ -16,16 +16,19 @@ struct ExploreTabView: View {
     
     var body: some View {
         
-        ScrollView {
-            LazyVGrid(columns: Columns, spacing: 1) {
-                ForEach(0..<16) { _ in
-                    Rectangle()
-                        .aspectRatio(1, contentMode: .fit)
+        NavigationView {
+            ScrollView {
+                LazyVGrid(columns: Columns, spacing: 1) {
+                    ForEach(0..<16) { _ in
+                        Rectangle()
+                            .aspectRatio(1, contentMode: .fit)
+                    }
                 }
+                
             }
-            
+            .searchable(text: $searchText, placement: .navigationBarDrawer)
         }
-        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search")
+        
     }
 }
 

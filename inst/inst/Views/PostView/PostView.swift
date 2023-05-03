@@ -18,9 +18,14 @@ struct PostView: View {
     var body: some View {
         LazyVStack(alignment: .leading) {
             HStack {
-                ProfileCircle(size: 40, user: post.sender)
+                ProfileCircle(size: 40, user: data.getUser(id: post.sender))
                 VStack(alignment: .leading) {
-                    Text(post.sender.name)
+                    NavigationLink {
+                        ProfileView(data: data, user: data.getUser(id: post.sender))
+                    } label: {
+                        Text(data.getUser(id: post.sender).name)
+                            .tint(.primary)
+                    }
                     if post.location != "" {
                         Text(post.location)
                             .font(.caption)
@@ -91,7 +96,7 @@ struct PostView: View {
                 ForEach(post.images, id: \.self) { image in
                     Image(image)
                         .resizable()
-                        //.aspectRatio(1, contentMode: .fit)
+                        .aspectRatio(contentMode: .fill)
                         .clipped()
                         .frame(height: 400)
                 }
@@ -157,7 +162,7 @@ struct PostView: View {
                 .padding(.horizontal)
             
             // description
-            Text("**\(post.sender.name)** \(post.description)")
+            Text("**\(data.getUser(id: post.sender).name)** \(post.description)")
                 .padding(.horizontal)
                 .lineLimit(2)
             
@@ -180,8 +185,9 @@ struct PostView: View {
 }
 
 struct PostView_Previews: PreviewProvider {
+    static var data = previewData()
     static var previews: some View {
-        PostView(post: ContentView.ViewModel().data.posts.randomElement()!,
-                 data: ContentView.ViewModel().data)
+        PostView(post: data.currentUser.posts.randomElement()!,
+                 data: data)
     }
 }

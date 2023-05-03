@@ -13,6 +13,7 @@ struct ReelView: View {
     @Environment(\.dismiss) private var dismiss
     
     @State var reel: Post
+    var data: ModelData
     
     var body: some View {
         ZStack {
@@ -24,8 +25,8 @@ struct ReelView: View {
 
                         // Profile
                         HStack {
-                            DefaultCircleImage(size: 40, imageName: reel.sender.profilePic)
-                            Text("**\(reel.sender.login)**")
+                            DefaultCircleImage(size: 40, imageName: data.getUser(id: reel.sender).profilePic)
+                            Text("**\(data.getUser(id: reel.sender).login)**")
                         }
                         .padding(.bottom, 5)
 
@@ -44,7 +45,7 @@ struct ReelView: View {
                         // Music
                         HStack {
                             Image(systemName: "music.note")
-                            Text("\(reel.sender.login) · Original audio")
+                            Text("\(data.getUser(id: reel.sender).login) · Original audio")
                         }
                         .padding(.vertical)
                     }
@@ -78,7 +79,7 @@ struct ReelView: View {
                             .font(.caption)
                         Image(systemName: "ellipsis")
                             .padding(.vertical)
-                        Image(reel.sender.profilePic)
+                        Image(data.getUser(id: reel.sender).profilePic)
                             .resizable()
                             .frame(width: 35, height: 35)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -158,10 +159,11 @@ struct VideoPlayerView: View {
 }
 
 struct ReelView_Previews: PreviewProvider {
+    static var data = previewData()
     static var previews: some View {
         NavigationView {
             //NavigationStack {
-                ReelView(reel: ContentView.ViewModel().data.currentUser.reels.first!)
+            ReelView(reel: data.currentUser.reels.first!, data: data)
             //}
         }
     }
