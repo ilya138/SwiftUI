@@ -15,10 +15,10 @@ struct DeleteActionView: View {
     var body: some View {
         Button(role: .destructive) {
             withAnimation {
-                model.likeFont(font: font)
+                //model.likeFont(font: font)
             }
         } label: {
-            Label("Delete", systemImage: "bin")
+            Label("Delete", systemImage: "trash")
         }
     }
 }

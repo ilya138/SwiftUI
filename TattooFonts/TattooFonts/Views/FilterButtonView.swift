@@ -14,11 +14,12 @@ struct FilterButtonView: View {
     var body: some View {
         // Filter
         Button {
-            likedOnly.toggle()
+            withAnimation {
+                likedOnly.toggle()
+            }
         } label: {
             Circle()
-                //.strokeBorder()
-                .foregroundColor(.primary.opacity(0.3))
+                .foregroundColor(.white)
                 .shadow(radius: 10)
                 .blur(radius: 1)
                 .frame(width: 70)
@@ -27,7 +28,7 @@ struct FilterButtonView: View {
                         .resizable()
                         .frame(width: 25, height: 25)
                         .foregroundColor(.red)
-
+                    
                 }
                 .padding(.horizontal, 30)
                 .padding(.vertical, 10)
@@ -39,5 +40,20 @@ struct FilterButtonView: View {
                 Label("Reset settings", systemImage: "gear")
             }
         }
+    }
+}
+
+struct PreviewParent: View {
+    
+    @State var likedOnly: Bool = false
+    
+    var body: some View {
+        FilterButtonView(likedOnly: $likedOnly)
+    }
+}
+
+struct FilterButtonView_Previews: PreviewProvider {
+    static var previews: some View {
+        PreviewParent()
     }
 }

@@ -47,7 +47,7 @@ class ViewModel: ObservableObject {
         }
         
         // restore likes
-        var storedLikes = UserDefaults.standard.object(forKey: "likes") as? [String: Bool] ?? [:]
+        let storedLikes = UserDefaults.standard.object(forKey: "likes") as? [String: Bool] ?? [:]
 
         for like in storedLikes {
             fonts[fonts.firstIndex(where: {$0.name == like.key})!].liked = like.value

@@ -20,7 +20,6 @@ struct LikeActionView: View {
         } label: {
             if font.liked {
                 Label("Unlike", systemImage: "heart.fill")
-                    .foregroundColor(.red)
             } else {
                 Label("Like", systemImage: "heart")
                     .foregroundColor(.red)

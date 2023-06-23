@@ -24,6 +24,7 @@ struct ContentView: View {
                 HStack(alignment: .center) {
                     TextField("Enter text", text: $text, axis: .vertical)
                         .textFieldStyle(.roundedBorder)
+                        .font(.title2)
                         .lineLimit(2)
                 }
                 .padding()
@@ -32,6 +33,8 @@ struct ContentView: View {
                     
                     NavigationLink(destination: FontView(text: text, font: font.name)) {
                         FontItemRowView(text: text, font: font)
+                            .frame(height: 50)
+                            .tint(.white)
                     }
                     // Like
                     .swipeActions(edge: .leading) {
@@ -49,6 +52,7 @@ struct ContentView: View {
                 }
             }
         }
+        .accentColor(.primary)
     }
     
 }
